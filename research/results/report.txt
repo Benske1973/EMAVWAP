@@ -1,0 +1,199 @@
+== Benchmarks
+part  bh_mean  bh_median  bh_pct_positive  regime_basket  regime_basket_dd
+  IS     33.5      -12.2             50.0           -0.8             -54.4
+ OOS    -12.8      -33.7             16.7           36.2             -28.2
+
+== pullback_trail | ranking test (5 slots)
+{
+ "IS": {
+  "RS high first": 38.3,
+  "RS low first": 53.1,
+  "random (mean)": 53.2,
+  "avg% per RS quintile": {
+   "Q1 zwak": -1.2,
+   "Q2": -0.21,
+   "Q3": -0.35,
+   "Q4": 0.68,
+   "Q5 sterk": 3.84
+  }
+ },
+ "OOS": {
+  "RS high first": 92.6,
+  "RS low first": 88.3,
+  "random (mean)": 89.3,
+  "avg% per RS quintile": {
+   "Q1 zwak": 1.06,
+   "Q2": 0.72,
+   "Q3": -1.23,
+   "Q4": 0.97,
+   "Q5 sterk": -0.29
+  }
+ }
+}
+  slots=3 IS: {'total': np.float64(91.5), 'cagr': np.float64(106.1), 'maxdd': np.float64(-52.6), 'sharpe': np.float64(1.02)} taken=177/723
+  slots=3 OOS: {'total': np.float64(112.8), 'cagr': np.float64(121.9), 'maxdd': np.float64(-28.5), 'sharpe': np.float64(1.55)} taken=107/480
+  slots=5 IS: {'total': np.float64(38.3), 'cagr': np.float64(42.7), 'maxdd': np.float64(-50.5), 'sharpe': np.float64(0.75)} taken=260/723
+  slots=5 OOS: {'total': np.float64(92.6), 'cagr': np.float64(99.7), 'maxdd': np.float64(-24.6), 'sharpe': np.float64(1.78)} taken=164/480
+  slots=8 IS: {'total': np.float64(17.6), 'cagr': np.float64(19.4), 'maxdd': np.float64(-43.8), 'sharpe': np.float64(0.56)} taken=369/723
+  slots=8 OOS: {'total': np.float64(43.0), 'cagr': np.float64(45.8), 'maxdd': np.float64(-20.9), 'sharpe': np.float64(1.34)} taken=239/480
+  per coin (worst 5 / best 5):
+            n   avg    sum
+sym                       
+WIF-USDT   31 -3.90 -120.8
+APT-USDT   35 -2.79  -97.7
+PEPE-USDT  32 -3.04  -97.4
+DOGE-USDT  34 -2.14  -72.9
+SUI-USDT   37 -1.61  -59.7 
+             n   avg    sum
+sym                       
+ALGO-USDT  22  2.92   64.2
+NEAR-USDT  37  3.26  120.5
+UNI-USDT   31  4.07  126.1
+XLM-USDT   27  6.22  168.0
+ZEC-USDT   27  6.72  181.5
+  coins with positive sum: 20/36
+
+== avwap_reclaim_vw | ranking test (5 slots)
+{
+ "IS": {
+  "RS high first": 24.2,
+  "RS low first": 37.7,
+  "random (mean)": 33.2,
+  "avg% per RS quintile": {
+   "Q1 zwak": -2.38,
+   "Q2": 2.03,
+   "Q3": 1.81,
+   "Q4": 1.6,
+   "Q5 sterk": 4.16
+  }
+ },
+ "OOS": {
+  "RS high first": 65.5,
+  "RS low first": 62.8,
+  "random (mean)": 62.7,
+  "avg% per RS quintile": {
+   "Q1 zwak": 1.23,
+   "Q2": 0.61,
+   "Q3": -1.29,
+   "Q4": 0.21,
+   "Q5 sterk": -0.23
+  }
+ }
+}
+  slots=3 IS: {'total': np.float64(22.9), 'cagr': np.float64(25.7), 'maxdd': np.float64(-40.0), 'sharpe': np.float64(0.6)} taken=148/529
+  slots=3 OOS: {'total': np.float64(112.2), 'cagr': np.float64(168.5), 'maxdd': np.float64(-19.5), 'sharpe': np.float64(1.81)} taken=103/360
+  slots=5 IS: {'total': np.float64(24.2), 'cagr': np.float64(26.6), 'maxdd': np.float64(-39.2), 'sharpe': np.float64(0.67)} taken=222/529
+  slots=5 OOS: {'total': np.float64(65.5), 'cagr': np.float64(93.7), 'maxdd': np.float64(-18.5), 'sharpe': np.float64(1.81)} taken=153/360
+  slots=8 IS: {'total': np.float64(24.9), 'cagr': np.float64(27.4), 'maxdd': np.float64(-32.2), 'sharpe': np.float64(0.71)} taken=304/529
+  slots=8 OOS: {'total': np.float64(32.6), 'cagr': np.float64(44.8), 'maxdd': np.float64(-15.5), 'sharpe': np.float64(1.52)} taken=214/360
+  per coin (worst 5 / best 5):
+            n   avg   sum
+sym                      
+PEPE-USDT  30 -2.86 -85.9
+APT-USDT   26 -2.95 -76.6
+TAO-USDT   24 -2.51 -60.2
+WIF-USDT   21 -2.82 -59.1
+DOGE-USDT  25 -1.99 -49.8 
+             n   avg    sum
+sym                       
+UNI-USDT   24  4.58  109.9
+ZEC-USDT   22  5.30  116.5
+NEAR-USDT  32  3.89  124.5
+AAVE-USDT  19  7.02  133.5
+ALGO-USDT  17  8.89  151.2
+  coins with positive sum: 21/36
+
+== vwap_cross_w | ranking test (5 slots)
+{
+ "IS": {
+  "RS high first": 3.6,
+  "RS low first": 31.4,
+  "random (mean)": 34.7,
+  "avg% per RS quintile": {
+   "Q1 zwak": 0.15,
+   "Q2": -0.32,
+   "Q3": -0.01,
+   "Q4": 0.78,
+   "Q5 sterk": 1.26
+  }
+ },
+ "OOS": {
+  "RS high first": 29.0,
+  "RS low first": 35.6,
+  "random (mean)": 31.8,
+  "avg% per RS quintile": {
+   "Q1 zwak": 1.51,
+   "Q2": 0.44,
+   "Q3": -0.38,
+   "Q4": -0.14,
+   "Q5 sterk": -0.24
+  }
+ }
+}
+  slots=3 IS: {'total': np.float64(24.7), 'cagr': np.float64(27.5), 'maxdd': np.float64(-65.0), 'sharpe': np.float64(0.66)} taken=461/1694
+  slots=3 OOS: {'total': np.float64(25.8), 'cagr': np.float64(27.1), 'maxdd': np.float64(-41.0), 'sharpe': np.float64(0.67)} taken=312/1222
+  slots=5 IS: {'total': np.float64(3.6), 'cagr': np.float64(3.9), 'maxdd': np.float64(-58.6), 'sharpe': np.float64(0.37)} taken=678/1694
+  slots=5 OOS: {'total': np.float64(29.0), 'cagr': np.float64(30.5), 'maxdd': np.float64(-29.1), 'sharpe': np.float64(0.73)} taken=467/1222
+  slots=8 IS: {'total': np.float64(1.9), 'cagr': np.float64(2.1), 'maxdd': np.float64(-50.5), 'sharpe': np.float64(0.3)} taken=922/1694
+  slots=8 OOS: {'total': np.float64(19.7), 'cagr': np.float64(20.6), 'maxdd': np.float64(-25.6), 'sharpe': np.float64(0.63)} taken=652/1222
+  per coin (worst 5 / best 5):
+             n   avg   sum
+sym                       
+APT-USDT    63 -1.50 -94.3
+DOGE-USDT   84 -0.74 -61.8
+XMR-USDT   141 -0.35 -48.8
+SHIB-USDT   67 -0.66 -44.5
+BTC-USDT   115 -0.34 -39.2 
+             n   avg    sum
+sym                       
+ETH-USDT   97  0.89   86.5
+NEAR-USDT  81  1.25  100.9
+STRK-USDT  61  2.28  139.0
+ENA-USDT   63  2.36  148.9
+ZEC-USDT   87  3.79  329.9
+  coins with positive sum: 23/36
+
+== Cost sensitivity (pullback_trail, btc>d50, full period)
+ cost_per_side  trades    avg   pf  total  cagr  maxdd  sharpe
+        0.0000    1203  0.732 1.29  241.0  90.3  -49.8    1.25
+        0.0008    1203  0.571 1.22  199.0  77.6  -54.2    1.15
+        0.0015    1203  0.430 1.16  166.5  67.2  -57.7    1.05
+        0.0025    1203  0.230 1.08  126.1  53.4  -62.3    0.92
+        0.0040    1203 -0.071 0.98   76.7  34.8  -68.3    0.72
+
+== Parameter grid (pullback, btc>d50)
+{'variant': 'basis', 'IS_n': 723, 'IS_avg%': np.float64(0.553), 'IS_pf': np.float64(1.19), 'IS_port%': np.float64(38.3), 'IS_dd%': np.float64(-50.5), 'OOS_n': 480, 'OOS_avg%': np.float64(0.246), 'OOS_pf': np.float64(1.1), 'OOS_port%': np.float64(92.6), 'OOS_dd%': np.float64(-24.6)}
+{'variant': "{'fast': 13, 'mid': 34}", 'IS_n': 914, 'IS_avg%': np.float64(0.486), 'IS_pf': np.float64(1.17), 'IS_port%': np.float64(94.1), 'IS_dd%': np.float64(-50.2), 'OOS_n': 581, 'OOS_avg%': np.float64(0.144), 'OOS_pf': np.float64(1.06), 'OOS_port%': np.float64(79.7), 'OOS_dd%': np.float64(-26.1)}
+{'variant': "{'fast': 20, 'mid': 50}", 'IS_n': 756, 'IS_avg%': np.float64(0.511), 'IS_pf': np.float64(1.17), 'IS_port%': np.float64(65.2), 'IS_dd%': np.float64(-49.3), 'OOS_n': 491, 'OOS_avg%': np.float64(0.209), 'OOS_pf': np.float64(1.09), 'OOS_port%': np.float64(97.2), 'OOS_dd%': np.float64(-24.8)}
+{'variant': "{'fast': 34, 'mid': 89}", 'IS_n': 576, 'IS_avg%': np.float64(0.941), 'IS_pf': np.float64(1.29), 'IS_port%': np.float64(20.7), 'IS_dd%': np.float64(-42.7), 'OOS_n': 374, 'OOS_avg%': np.float64(0.732), 'OOS_pf': np.float64(1.29), 'OOS_port%': np.float64(105.2), 'OOS_dd%': np.float64(-19.3)}
+{'variant': "{'slow': 100}", 'IS_n': 747, 'IS_avg%': np.float64(0.806), 'IS_pf': np.float64(1.28), 'IS_port%': np.float64(36.9), 'IS_dd%': np.float64(-50.2), 'OOS_n': 526, 'OOS_avg%': np.float64(0.137), 'OOS_pf': np.float64(1.06), 'OOS_port%': np.float64(73.8), 'OOS_dd%': np.float64(-24.5)}
+{'variant': "{'slow': 150}", 'IS_n': 731, 'IS_avg%': np.float64(0.586), 'IS_pf': np.float64(1.2), 'IS_port%': np.float64(30.2), 'IS_dd%': np.float64(-53.3), 'OOS_n': 499, 'OOS_avg%': np.float64(0.113), 'OOS_pf': np.float64(1.05), 'OOS_port%': np.float64(70.9), 'OOS_dd%': np.float64(-26.1)}
+{'variant': "{'slow': 300}", 'IS_n': 683, 'IS_avg%': np.float64(0.637), 'IS_pf': np.float64(1.21), 'IS_port%': np.float64(27.7), 'IS_dd%': np.float64(-54.3), 'OOS_n': 422, 'OOS_avg%': np.float64(0.383), 'OOS_pf': np.float64(1.16), 'OOS_port%': np.float64(90.7), 'OOS_dd%': np.float64(-17.3)}
+{'variant': "{'vwn': 3}", 'IS_n': 697, 'IS_avg%': np.float64(0.446), 'IS_pf': np.float64(1.15), 'IS_port%': np.float64(54.8), 'IS_dd%': np.float64(-39.1), 'OOS_n': 486, 'OOS_avg%': np.float64(0.153), 'OOS_pf': np.float64(1.06), 'OOS_port%': np.float64(80.5), 'OOS_dd%': np.float64(-28.7)}
+{'variant': "{'vwn': 14}", 'IS_n': 821, 'IS_avg%': np.float64(0.561), 'IS_pf': np.float64(1.21), 'IS_port%': np.float64(42.3), 'IS_dd%': np.float64(-48.4), 'OOS_n': 572, 'OOS_avg%': np.float64(-0.018), 'OOS_pf': np.float64(0.99), 'OOS_port%': np.float64(66.5), 'OOS_dd%': np.float64(-26.2)}
+{'variant': "{'vwn': 30}", 'IS_n': 827, 'IS_avg%': np.float64(0.538), 'IS_pf': np.float64(1.2), 'IS_port%': np.float64(42.3), 'IS_dd%': np.float64(-48.4), 'OOS_n': 605, 'OOS_avg%': np.float64(-0.075), 'OOS_pf': np.float64(0.97), 'OOS_port%': np.float64(72.5), 'OOS_dd%': np.float64(-27.1)}
+{'variant': "{'vwn': 'W'}", 'IS_n': 730, 'IS_avg%': np.float64(0.325), 'IS_pf': np.float64(1.11), 'IS_port%': np.float64(42.0), 'IS_dd%': np.float64(-44.7), 'OOS_n': 493, 'OOS_avg%': np.float64(0.251), 'OOS_pf': np.float64(1.11), 'OOS_port%': np.float64(82.4), 'OOS_dd%': np.float64(-25.6)}
+{'variant': "{'buf': 0.0}", 'IS_n': 1015, 'IS_avg%': np.float64(0.342), 'IS_pf': np.float64(1.16), 'IS_port%': np.float64(61.4), 'IS_dd%': np.float64(-39.7), 'OOS_n': 680, 'OOS_avg%': np.float64(0.183), 'OOS_pf': np.float64(1.1), 'OOS_port%': np.float64(59.3), 'OOS_dd%': np.float64(-31.0)}
+{'variant': "{'buf': 1.0}", 'IS_n': 538, 'IS_avg%': np.float64(1.133), 'IS_pf': np.float64(1.3), 'IS_port%': np.float64(79.6), 'IS_dd%': np.float64(-30.4), 'OOS_n': 350, 'OOS_avg%': np.float64(0.516), 'OOS_pf': np.float64(1.17), 'OOS_port%': np.float64(41.2), 'OOS_dd%': np.float64(-26.0)}
+{'variant': "{'trail': 'mid'}", 'IS_n': 518, 'IS_avg%': np.float64(1.021), 'IS_pf': np.float64(1.28), 'IS_port%': np.float64(56.8), 'IS_dd%': np.float64(-35.0), 'OOS_n': 338, 'OOS_avg%': np.float64(0.82), 'OOS_pf': np.float64(1.29), 'OOS_port%': np.float64(71.6), 'OOS_dd%': np.float64(-25.0)}
+{'variant': "{'swing': 3}", 'IS_n': 728, 'IS_avg%': np.float64(0.554), 'IS_pf': np.float64(1.19), 'IS_port%': np.float64(37.7), 'IS_dd%': np.float64(-50.2), 'OOS_n': 483, 'OOS_avg%': np.float64(0.262), 'OOS_pf': np.float64(1.11), 'OOS_port%': np.float64(94.6), 'OOS_dd%': np.float64(-24.3)}
+{'variant': "{'swing': 10}", 'IS_n': 717, 'IS_avg%': np.float64(0.556), 'IS_pf': np.float64(1.19), 'IS_port%': np.float64(42.9), 'IS_dd%': np.float64(-48.8), 'OOS_n': 471, 'OOS_avg%': np.float64(0.277), 'OOS_pf': np.float64(1.11), 'OOS_port%': np.float64(92.6), 'OOS_dd%': np.float64(-24.3)}
+{'variant': "{'vol': True}", 'IS_n': 518, 'IS_avg%': np.float64(0.968), 'IS_pf': np.float64(1.31), 'IS_port%': np.float64(72.2), 'IS_dd%': np.float64(-33.3), 'OOS_n': 358, 'OOS_avg%': np.float64(0.498), 'OOS_pf': np.float64(1.2), 'OOS_port%': np.float64(63.5), 'OOS_dd%': np.float64(-22.2)}
+                variant  IS_n  IS_avg%  IS_pf  IS_port%  IS_dd%  OOS_n  OOS_avg%  OOS_pf  OOS_port%  OOS_dd%
+                  basis   723    0.553   1.19      38.3   -50.5    480     0.246    1.10       92.6    -24.6
+{'fast': 13, 'mid': 34}   914    0.486   1.17      94.1   -50.2    581     0.144    1.06       79.7    -26.1
+{'fast': 20, 'mid': 50}   756    0.511   1.17      65.2   -49.3    491     0.209    1.09       97.2    -24.8
+{'fast': 34, 'mid': 89}   576    0.941   1.29      20.7   -42.7    374     0.732    1.29      105.2    -19.3
+          {'slow': 100}   747    0.806   1.28      36.9   -50.2    526     0.137    1.06       73.8    -24.5
+          {'slow': 150}   731    0.586   1.20      30.2   -53.3    499     0.113    1.05       70.9    -26.1
+          {'slow': 300}   683    0.637   1.21      27.7   -54.3    422     0.383    1.16       90.7    -17.3
+             {'vwn': 3}   697    0.446   1.15      54.8   -39.1    486     0.153    1.06       80.5    -28.7
+            {'vwn': 14}   821    0.561   1.21      42.3   -48.4    572    -0.018    0.99       66.5    -26.2
+            {'vwn': 30}   827    0.538   1.20      42.3   -48.4    605    -0.075    0.97       72.5    -27.1
+           {'vwn': 'W'}   730    0.325   1.11      42.0   -44.7    493     0.251    1.11       82.4    -25.6
+           {'buf': 0.0}  1015    0.342   1.16      61.4   -39.7    680     0.183    1.10       59.3    -31.0
+           {'buf': 1.0}   538    1.133   1.30      79.6   -30.4    350     0.516    1.17       41.2    -26.0
+       {'trail': 'mid'}   518    1.021   1.28      56.8   -35.0    338     0.820    1.29       71.6    -25.0
+           {'swing': 3}   728    0.554   1.19      37.7   -50.2    483     0.262    1.11       94.6    -24.3
+          {'swing': 10}   717    0.556   1.19      42.9   -48.8    471     0.277    1.11       92.6    -24.3
+          {'vol': True}   518    0.968   1.31      72.2   -33.3    358     0.498    1.20       63.5    -22.2

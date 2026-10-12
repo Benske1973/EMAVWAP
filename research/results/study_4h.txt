@@ -1,0 +1,44 @@
+universe: 36 ['AAVE-USDT', 'ADA-USDT', 'ALGO-USDT', 'APT-USDT', 'ARB-USDT', 'ATOM-USDT', 'AVAX-USDT', 'BNB-USDT', 'BTC-USDT', 'DOGE-USDT', 'DOT-USDT', 'ENA-USDT', 'ETH-USDT', 'FET-USDT', 'FIL-USDT', 'ICP-USDT', 'INJ-USDT', 'LINK-USDT', 'LTC-USDT', 'NEAR-USDT', 'ONDO-USDT', 'PEPE-USDT', 'SEI-USDT', 'SHIB-USDT', 'SOL-USDT', 'STRK-USDT', 'SUI-USDT', 'TAO-USDT', 'TRX-USDT', 'UNI-USDT', 'WIF-USDT', 'WLD-USDT', 'XLM-USDT', 'XMR-USDT', 'XRP-USDT', 'ZEC-USDT']
+            label part  trades  win    avg    med   pf  avgR  bars  P_total  P_cagr  P_maxdd  P_sharpe
+4h|ema_cross|none   IS    1650 25.8 -0.061 -2.711 0.98  0.09  20.9     19.7    21.9    -53.7      0.63
+4h|ema_cross|none  OOS    1791 24.5 -0.202 -2.312 0.92  0.07  19.4     61.0    61.6    -37.3      1.19
+4h|ema_cross|btc>d50  IS 1050 25.8 0.367 -2.729 1.12 0.13 21.2 19.9  22.0 -41.9 0.66
+4h|ema_cross|btc>d50 OOS  571 32.6 1.971 -1.840 1.90 0.40 21.6 99.2 147.1 -17.0 2.03
+4h|ema_cross|btc d20>d50  IS 1172 23.4 -0.068 -2.925 0.98 0.07 20.0  3.1  3.4 -52.2 0.35
+4h|ema_cross|btc d20>d50 OOS  491 28.5  1.297 -1.998 1.53 0.23 19.9 64.4 65.1 -16.5 1.56
+4h|vwap_cross_w|none  IS 1917 21.7 0.232 -1.330 1.13 0.08 8.0 -15.5 -16.9 -67.4 0.04
+4h|vwap_cross_w|none OOS 1678 23.2 0.086 -1.146 1.06 0.10 6.9  10.9  11.0 -34.4 0.43
+4h|vwap_cross_w|btc>d50  IS 1694 22.2 0.371 -1.33 1.21 0.10 8.1  3.6  3.9 -58.6 0.37
+4h|vwap_cross_w|btc>d50 OOS 1222 22.0 0.238 -1.14 1.17 0.12 6.9 29.0 30.5 -29.1 0.73
+4h|vwap_cross_w|btc d20>d50  IS 1737 21.5 0.201 -1.362 1.11 0.08 7.9 -32.9 -35.5 -66.5 -0.43
+4h|vwap_cross_w|btc d20>d50 OOS 1094 23.2 0.308 -1.118 1.22 0.10 7.0  26.6  26.7 -17.8  0.67
+4h|pullback_trail|none  IS 776 24.9  0.663 -2.667 1.23 0.19 17.2 86.8 98.4 -46.5 1.13
+4h|pullback_trail|none OOS 643 27.5 -0.034 -2.223 0.99 0.09 16.9 74.3 74.8 -24.7 1.43
+4h|pullback_trail|btc>d50  IS 723 24.9 0.553 -2.719 1.19 0.14 17.2 38.3 42.7 -50.5 0.75
+4h|pullback_trail|btc>d50 OOS 480 26.7 0.246 -2.129 1.10 0.13 16.7 92.6 99.7 -24.6 1.78
+4h|pullback_trail|btc d20>d50  IS 717 24.7 0.485 -2.817 1.16  0.14 17.1 27.5 30.5 -54.4 0.64
+4h|pullback_trail|btc d20>d50 OOS 431 26.2 0.150 -2.167 1.06 -0.02 16.4 70.2 70.7 -16.1 1.59
+4h|pullback_chand|none  IS 814 29.9 -0.264 -2.680 0.92 0.03 15.7 14.3 15.8 -45.9 0.56
+4h|pullback_chand|none OOS 665 29.9 -0.103 -2.193 0.96 0.11 15.0 27.5 27.7 -35.0 0.76
+4h|pullback_chand|btc>d50  IS 763 29.8 -0.248 -2.741 0.92 0.02 15.6 19.8 22.2 -39.6 0.68
+4h|pullback_chand|btc>d50 OOS 493 28.4  0.193 -2.019 1.08 0.15 14.6 64.9 69.2 -26.9 1.56
+4h|pullback_chand|btc d20>d50  IS 754 29.2 -0.352 -2.846 0.89 0.01 15.7  8.8  9.7 -42.7 0.44
+4h|pullback_chand|btc d20>d50 OOS 435 28.7  0.157 -2.126 1.06 0.06 14.9 46.9 47.2 -16.1 1.31
+4h|vwap_breakout|none  IS 280 39.3  0.502 -1.993 1.16 0.23 15.7 -1.1 -1.3 -38.3 0.13
+4h|vwap_breakout|none OOS 250 30.4 -0.018 -2.328 0.99 0.07 13.1 17.0 17.2 -16.6 0.72
+4h|vwap_breakout|btc>d50  IS 245 38.0  0.615 -2.129 1.19 0.25 15.4 5.8  6.5 -33.7 0.35
+4h|vwap_breakout|btc>d50 OOS 142 25.4 -0.233 -2.616 0.92 0.08 11.9 7.7 10.2 -17.3 0.63
+4h|vwap_breakout|btc d20>d50  IS 237 35.9  0.118 -2.231 1.04  0.16 14.9 -11.9 -13.2 -34.7 -0.33
+4h|vwap_breakout|btc d20>d50 OOS 116 24.1 -0.158 -3.028 0.95 -0.02 12.2  10.5  10.6 -12.9  0.63
+4h|avwap_reclaim_ch|none  IS 546 33.7  0.768 -2.535 1.26 0.18 17.1 38.3 43.7 -33.5 0.99
+4h|avwap_reclaim_ch|none OOS 501 28.5 -0.053 -2.229 0.98 0.05 15.7 46.6 46.9 -32.9 1.10
+4h|avwap_reclaim_ch|btc>d50  IS 491 34.0 0.755 -2.566 1.25 0.17 17.2 27.2 30.8 -32.1 0.81
+4h|avwap_reclaim_ch|btc>d50 OOS 323 25.7 0.216 -2.326 1.08 0.10 14.9 65.5 93.8 -17.2 1.83
+4h|avwap_reclaim_ch|btc d20>d50  IS 490 34.5 0.752 -2.550 1.25 0.16 17.4 18.6 20.9 -35.4 0.63
+4h|avwap_reclaim_ch|btc d20>d50 OOS 275 26.2 0.493 -2.246 1.19 0.11 15.6 85.1 85.8  -9.9 1.92
+4h|avwap_reclaim_vw|none  IS 587 20.4  1.617 -2.463 1.59 0.30 19.4 74.8 83.7 -33.1 1.24
+4h|avwap_reclaim_vw|none OOS 535 20.0 -0.065 -2.246 0.97 0.02 16.8 60.5 60.9 -27.2 1.31
+4h|avwap_reclaim_vw|btc>d50  IS 529 20.8 1.446 -2.482 1.52 0.24 19.4 24.2 26.6 -39.2 0.67
+4h|avwap_reclaim_vw|btc>d50 OOS 360 19.2 0.105 -2.216 1.05 0.08 15.8 65.5 93.7 -18.5 1.81
+4h|avwap_reclaim_vw|btc d20>d50  IS 532 20.3 1.402 -2.521 1.50 0.23 19.3 13.5 14.8 -44.5 0.49
+4h|avwap_reclaim_vw|btc d20>d50 OOS 311 18.0 0.284 -2.228 1.12 0.03 15.9 73.6 74.1  -9.6 1.73
