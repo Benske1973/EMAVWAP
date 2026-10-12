@@ -1,7 +1,7 @@
 # Research: EMA/VWAP backtests op KuCoin spot
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 cd research
 python fetch.py BTC-USDT ETH-USDT SOL-USDT ...   # 2 jaar 15m-candles -> data/ (niet in git)
 python study.py 4h 1h    # alle strategieën x regimefilters, IS/OOS -> results/study_results_*.csv

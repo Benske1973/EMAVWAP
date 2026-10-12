@@ -1,0 +1,10 @@
+services:
+  scanner:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - ./state:/app/state
+      - ./config.toml:/app/config.toml:ro

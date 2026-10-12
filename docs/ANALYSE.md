@@ -59,7 +59,7 @@
 | **Kosten** | 0,10% fee + 0,05% slippage **per kant** |
 | **Uitvoering** | Signaal op de candle-close, entry op de open van de volgende candle. Stops worden binnen de candle gecontroleerd; bij een gap vul ik tegen de open. Als stop en target in dezelfde candle vallen, neem ik aan dat de stop eerst geraakt werd (conservatief). |
 | **Split** | **In-sample** okt 2024 - okt 2025 (bull met correctie), **out-of-sample** okt 2025 - okt 2026 (bear, daarna herstel) |
-| **Portfolio** | Geen hefboom. Variant A: max 5 posities × 20%. Variant B: 1% risico per trade, max 8 posities. Max 1 positie per coin. |
+| **Portfolio** | Geen hefboom. Variant A: max 5 posities × 20%. Variant B: 1% risico per trade, max 8 posities van elk maximaal 12,5% (1/8) van het kapitaal. Max 1 positie per coin. |
 | **Benchmarks** | Buy & hold BTC, buy & hold van de 36 coins (gelijk gewogen), en een "regime-mandje": alle coins vasthouden zolang BTC > EMA50 |
 
 De code staat in [`research/`](../research), de ruwe uitkomsten in [`research/results/`](../research/results).
@@ -197,7 +197,7 @@ De edge zit dus niet in één toevallige parameterwaarde: bijna alle varianten z
 - **Entry:** op de open van de volgende candle (of een limietorder rond de close-prijs).
 - **Initiële stop:** de laagste van (laagste low van 5 candles − 0,25 × ATR14) en (close − 1 × ATR14). Plaats die als stop-order op KuCoin.
 - **Exit:** 4h-close < EMA50 − 0,5 × ATR14, verkopen op de volgende open. Geen vast target.
-- **Positiegrootte:** risico 1% van het kapitaal, dus aantal = 1% × kapitaal / (entry − stop). Maximaal 20% van het kapitaal per positie.
+- **Positiegrootte:** risico 1% van het kapitaal, dus aantal = 1% × kapitaal / (entry − stop). Maximaal 12,5% van het kapitaal per positie (1/8, zoals getest). Bij een krappe stop wordt het risico daardoor kleiner dan 1%.
 - **Limieten:** max 8 open posities, max 1 per coin.
 - **Bij meer signalen dan vrije plekken:** er is geen bewezen ranking. Pragmatisch: kies de hoogste liquiditeit (minste slippage) en toon relatieve sterkte en ATR% als extra informatie.
 

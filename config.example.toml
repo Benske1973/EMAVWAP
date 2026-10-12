@@ -1,0 +1,43 @@
+# EMA/VWAP scanner: kopieer naar config.toml en pas aan.
+# Alle waarden hieronder zijn de standaardwaarden (strategie v1 uit docs/ANALYSE.md).
+# Geheimen (Telegram/Discord) horen in .env, niet hier: zie .env.example.
+
+[universe]
+min_turnover_usd = 2000000      # minimale 24h-omzet in USDT
+max_spread_pct = 0.30           # maximale bid/ask-spread in %
+min_history_days = 60           # nieuwe listings overslaan (EMA200 op 4h heeft historie nodig)
+exclude = []                    # bv. ["PEPE", "WIF-USDT"]
+
+[strategy]
+# Gevalideerd in de backtest. Wijzig alleen als je opnieuw test (research/).
+ema_trigger = 9
+ema_fast = 21
+ema_mid = 50
+ema_slow = 200
+vwap_days = 7                   # rolling VWAP over 7 dagen = 42 candles van 4h
+pullback_bars = 3
+pullback_tol = 0.002
+vol_len = 20
+atr_len = 14
+swing_bars = 5
+swing_atr_buf = 0.25
+min_stop_atr = 1.0
+exit_atr_buf = 0.5              # exit: 4h-close < EMA50 - 0.5 x ATR
+regime_symbol = "BTC-USDT"
+regime_ema = 50                 # long alleen als BTC dag-close > dag-EMA50
+
+[risk]
+equity_usdt = 1000.0            # startkapitaal van de paper-portefeuille
+risk_pct = 1.0                  # risico per trade in % van het kapitaal
+max_position_pct = 12.5         # maximale positie in % van het kapitaal (= 1/8, zoals getest)
+max_positions = 8
+cost_pct = 0.15                 # fee + slippage per kant, voor de paper-resultaten
+
+[runtime]
+state_file = "state/portfolio.json"
+signal_log = "state/signals.csv"
+run_delay_s = 90                # seconden na de 4h-close wachten (KuCoin werkt de candle bij)
+timezone = "Europe/Amsterdam"
+
+[notify]
+notify_summary = false          # true = na elke scan een samenvatting, ook zonder signalen
